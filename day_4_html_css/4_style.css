@@ -1,0 +1,18 @@
+body {
+  background-image: url("journey.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-size: cover;
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  opacity: .80;
+  border-width: thick;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(255, 0, 0, 0.4);
+}

@@ -1,0 +1,59 @@
+/* this is my css file*/
+h1 {
+  font-family: Helvetica;
+  color: teal;
+}
+
+/* to target an element which has a class attribute, we use the "." syntax */
+.special {
+  font-size: 40px;
+  font-family: "Comic Sans MS";
+  color: gold;
+  background-color: purple;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+/* CSS - classes are meant to be reused */
+
+/*h1 <- html element tag selector*/
+/*.highlight <- class selector, which is meant to be reused amoungst our html*/
+
+/* # == id, we are targeting one specific element */
+#day9 {
+  display: none;
+}
+
+/* we are looking for ancestry, grand children, grand grand children */
+ul li {
+}
+
+/* direct parent child relationship */
+ul > li {
+  list-style: square;
+}
+
+#concepts > li {
+}
+
+.special p {}
+.special > p {}
+div.special > p {}
+
+.special > li {}
+.special li {}
+ul.special > li {}
+/*h1#day9*/
+
+.island {
+  font-family: "Minecrafter 3" !important;
+}
+
+/**/
