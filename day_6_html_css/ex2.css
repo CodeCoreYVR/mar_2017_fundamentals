@@ -1,0 +1,35 @@
+#red {
+  width: 450px;
+  height: 200px;
+  background-color: red;
+  float: left;
+  top: 25px;
+  left: 25px;
+  position: relative;
+}
+#green {
+  width: 210px;
+  height: 530px;
+  background-color: green;
+  float: left;
+  position: relative;
+  top: 250px;
+  left: -425px;
+}
+#yellow {
+  width: 500px;
+  height: 800px;
+  background-color: yellow;
+  float: left;
+  position: absolute;;
+  z-index: -1;
+}
+#blue {
+  width: 210px;
+  height: 530px;
+  background-color: blue;
+  float: left;
+  position: relative;
+  top: 250px;
+  left: -395px;
+}
