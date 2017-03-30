@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flex Items</title>
+    <style>
+    .flex-me {
+      display: flex;
+      background-color: azure;
+      border: thin solid teal;
+      border-radius: 5px;
+      min-height: 150px;
+    }
+    .flex-me > div {
+      width: 75px;
+      min-height: 75px;
+      background-color: teal;
+      border-radius: 5px;
+      border: thin solid red;
+      font-size: 25px;
+      color: white;
+      font-family: sans-serif;
+    }
+    .flex-item {
+      display: flex;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Flex Items</h1>
+    <h2>display:flex</h2>
+    <div class="flex-me">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+
+    <h2>ordering</h2>
+    <div class="flex-me">
+      <div class="flex-item" style="order:6">1</div>
+      <div class="flex-item" style="order:5">2</div>
+      <div class="flex-item" style="order:4">3</div>
+      <div class="flex-item" style="order:3">4</div>
+      <div class="flex-item" style="order:2">5</div>
+      <div class="flex-item" style="order:1">6</div>
+    </div>
+
+    <h1>growing and shrinking</h1>
+    <h2>display:flex</h2>
+    <div class="flex-me" style="width: 25%">
+      <div class="flex-item" style="order:6;">1</div>
+      <div class="flex-item" style="order:5;">2</div>
+      <div class="flex-item" style="order:4;">3</div>
+      <div class="flex-item" style="order:3; flex-shrink:1;">4</div>
+      <div class="flex-item" style="order:2; flex-shrink:2;">5</div>
+      <div class="flex-item" style="order:1; flex-shrink:4;">6</div>
+    </div>
+
+    <h2>align-self: stretch, flex-start, flex-end, center, baseline</h2>
+    <div class="flex-me" style="width: 25%">
+      <div class="flex-item" style="align-self: flex-end">1</div>
+      <div class="flex-item" style="">2</div>
+      <div class="flex-item" style="align-self: center">3</div>
+      <div class="flex-item" style="">4</div>
+      <div class="flex-item" style="">5</div>
+      <div class="flex-item" style="align-self: flex-start">6</div>
+    </div>
+
+  </body>
+</html>
+
+
+
+
+<!--  -->

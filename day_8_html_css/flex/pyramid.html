@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pyramid</title>
+    <style>
+      .circle {
+        display: flex;
+        flex-shrink: 0;
+        height: 100px;
+        width: 100px;
+        /*height: 5vw;
+        width: 5vw;*/
+        border-radius: 50%;
+        background-color: red;
+        margin-right: 50px;
+      }
+      .row {
+        display: flex;
+        /*border: 1px solid red;*/
+        justify-content: center;
+      }
+      .row:nth-child(2) > .circle {
+        background-color: orange;
+      }
+      .row:nth-child(3) > .circle {
+        background-color: yellow;
+      }
+      .row:nth-child(4) > .circle {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="circle"></div>
+    </div>
+
+    <div class="row">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="row">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="row">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

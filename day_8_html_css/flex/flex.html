@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flex Container</title>
+    <style>
+      .flex-me {
+        display: flex;
+        background-color: azure;
+        border: thin solid teal;
+        border-radius: 5px;
+        min-height: 150px;
+      }
+      .flex-me > div {
+        width: 75px;
+        min-height: 75px;
+        background-color: teal;
+        border-radius: 5px;
+        border: thin solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex Container</h1>
+    <h2>display:flex</h2>
+    <div class="flex-me">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <h2>align-items</h2>
+    <div class="flex-me" style="align-items:center">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <h2>justify-content</h2>
+    <div class="flex-me" style="justify-content:flex-end">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <h2>align-items justify-content</h2>
+    <div class="flex-me" style="align-items:center; justify-content:center;">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <h2>flex wrap</h2>
+    <div class="flex-me" style="flex-wrap:wrap;">
+      <div></div> <div></div>
+      <div></div> <div></div>
+      <div></div> <div></div>
+      <div></div> <div></div>
+      <div></div> <div></div>
+      <div></div> <div></div>
+    </div>
+
+    <h2>flex direction</h2>
+    <div class="flex-me" style="flex-direction: column">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<!--  -->
