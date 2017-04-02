@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Blog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      const config = {
+        apiKey: "AIzaSyAYHfjEMFkwj9RyDx5Ydn-fXAhGAeD4r94",
+        authDomain: "awesome-blog-a4e68.firebaseapp.com",
+        databaseURL: "https://awesome-blog-a4e68.firebaseio.com",
+        projectId: "awesome-blog-a4e68",
+        storageBucket: "awesome-blog-a4e68.appspot.com",
+        messagingSenderId: "1044035530741"
+      };
+      firebase.initializeApp(config);
+
+      $(document).ready(function(){
+        $('#user-auth').submit(function(event){
+          event.preventDefault();
+          firebase.auth().signInWithEmailAndPassword($('#email').val(), $('#password').val())
+                .then(function(){
+                  $('#signin-form').hide();
+                  $('#admin-form').show();
+                }).catch(function(error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage + errorCode);
+                  });
+        });
+        $('#post-form').submit(function(event){
+          firebase.database().ref().child('posts').push({
+              title: $('#title').val(),
+              body: $('#body').val()
+            }, function(error){
+              if(error){
+                alert(`problem creating post ${error}`);
+              } else {
+                alert('post created successfully');
+              }
+            });
+
+          event.preventDefault();
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1>Admin Panel</h1>
+
+    <div id="signin-form">
+      <form id="user-auth">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password">
+        </div>
+        <input type="submit" value="Sign In">
+      </form>
+    </div>
+
+    <div id='admin-form' style="display:none;">
+      <form id='post-form'>
+        <div>
+          <label for="title">Title</label>
+          <input id="title" type="text">
+        </div>
+        <div>
+          <label for="body">Body</label>
+          <textarea id="body"></textarea>
+        </div>
+        <input type="submit" value="Save Post">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Blog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      const config = {
+        apiKey: "AIzaSyAYHfjEMFkwj9RyDx5Ydn-fXAhGAeD4r94",
+        authDomain: "awesome-blog-a4e68.firebaseapp.com",
+        databaseURL: "https://awesome-blog-a4e68.firebaseio.com",
+        projectId: "awesome-blog-a4e68",
+        storageBucket: "awesome-blog-a4e68.appspot.com",
+        messagingSenderId: "1044035530741"
+      };
+      firebase.initializeApp(config);
+
+      $(document).ready(function() {
+        const id = window.location.hash.slice(1);
+        firebase.database().ref(`posts/${id}`).once('value').then(
+          function(data){
+            let post = data.val();
+            $('#post-title').html(post.title);
+            $('#post-body').html(post.body);
+          });
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <h1 id='post-title'></h1>
+    <p id='post-body'></h1>
+  </body>
+</html>

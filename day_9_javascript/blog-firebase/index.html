@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Blog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      const config = {
+        apiKey: "AIzaSyAYHfjEMFkwj9RyDx5Ydn-fXAhGAeD4r94",
+        authDomain: "awesome-blog-a4e68.firebaseapp.com",
+        databaseURL: "https://awesome-blog-a4e68.firebaseio.com",
+        projectId: "awesome-blog-a4e68",
+        storageBucket: "awesome-blog-a4e68.appspot.com",
+        messagingSenderId: "1044035530741"
+      };
+      firebase.initializeApp(config);
+
+      firebase.database().ref('posts').once('value').then(
+        function(data){
+          const posts = data.val();
+          for(let key in posts) {
+            let post = posts[key];
+            if(post !== undefined) {
+              $('#posts').append(`
+                <h3>
+                  <a href='show.html#${key}'>${post.title}</a>
+                </h3>
+                <hr />
+                `);
+            }
+          }
+
+        }
+      );
+
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to my Blog</h1>
+    <div id='posts'></div>
+  </body>
+</html>
