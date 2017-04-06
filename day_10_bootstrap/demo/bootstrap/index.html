@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Demo</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:400i|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+      /*@media
+      @keyframes
+      @font-face
+      @import*/
+
+      @keyframes sunrise {
+        from {
+          color: black;
+          left: 0px;
+          top: 0px;
+          transform: rotate(180deg);
+        } to {
+          color: pink;
+          left: 500px;
+          top: 1000px;
+          transform: rotate(360deg);
+        }
+      }
+
+      #power {
+        position: relative;
+        top: 100px;
+        left: 0px;
+        transform: rotate(180deg);
+
+        animation-name: sunrise;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      h1 {
+        font-family: 'Permanent Marker', cursive;
+      }
+      h2 {
+        font-family: 'Cantarell', sans-serif;
+      }
+      .ta {
+        border: thin red solid;
+      }
+      body {
+        /*padding-top: 50px;*/
+      }
+      .section {
+        padding-top: 50px;
+        color: white;
+        font-family: Helvetica;
+      }
+      #home {
+        background-color: purple;
+      }
+      #services {
+        background-color: blue;
+      }
+      #projects {
+        background-color: orange;
+      }
+      #contact {
+        background-color: red;
+      }
+
+
+    </style>
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+    // $(document).ready(function(){
+    //   $('#services-button').click(function(){
+    //     $(this).parent().addClass("none");
+    //
+    //     $(this).parent().addClass("active");
+    //   });
+    // });
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- <div class="container"> -->
+    <!-- HTML5 Semantic Tag -->
+
+    <!-- this is a bootstrap navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">CodeCore Services</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a id="services-button" href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- this is a jumbotron -->
+    <div id="home" class="section container-fluid text-center">
+      <div class="jumbotron">
+        <h1>Welcome to CodeCore Services</h1>
+        <p>We make web apps!</p>
+      </div>
+      <p>This is some text.</p>
+      <p>This is another text.</p>
+    </div>
+
+
+    <div id="services" class="section container-fluid text-center">
+      <h1>Services</h1>
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">
+          <span id="power" class="glyphicon glyphicon-off" style="font-size: 100px; color: red;"></span>
+          <h2>jQuery</h2>
+          <p>Write less, do more...</p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">
+          <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+          <h2>Firebase</h2>
+          <p>It's hard...</p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">JavaScript</div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">HTML</div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">CSS</div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 ta">Bootstrap</div>
+      </div>
+    </div>
+
+    <div id="projects" class="section container-fluid">
+      <h2>Projects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="contact" class="section container-fluid">
+      <h2>Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </body>
+</html>
